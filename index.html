@@ -595,6 +595,189 @@
         margin-bottom: 0.3rem;
       }
 
+      /* ============================
+         EXPERIENCE TIMELINE (Masud)
+         ============================ */
+
+      #experience {
+        padding-top: 3rem;
+      }
+
+      #experience h3 {
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+
+      /* Wrapper */
+      .timeline {
+        position: relative;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 0 0 3rem 0;
+      }
+
+      /* Center vertical line */
+      .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        background: #ffffff;
+        opacity: 0.3;
+        transform: translateX(-50%);
+      }
+
+      /* Each item */
+      .timeline-item {
+        position: relative;
+        width: 50%;
+        padding: 0 40px 60px;
+        box-sizing: border-box;
+      }
+
+      .timeline-item.left {
+        left: 0;
+        text-align: left;
+      }
+
+      .timeline-item.right {
+        left: 50%;
+        text-align: left;
+      }
+
+      /* Dot in the center line */
+      .timeline-dot {
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #111111;
+        border: 3px solid #ffffff;
+        transform: translateX(-50%);
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
+      }
+
+      /* Inner content */
+      .timeline-content {
+        position: relative;
+      }
+
+      /* Date banner (top ribbon) */
+      .timeline-date {
+        display: inline-block;
+        padding: 8px 26px;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-transform: none;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+      }
+
+      .timeline-date::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 22px;
+        border-width: 8px 8px 0 0;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.35) transparent transparent transparent;
+      }
+
+      /* Different colors like the template */
+      .banner-blue {
+        background: #336699;
+      }
+
+      .banner-pink {
+        background: #c73b5a;
+      }
+
+      .banner-gold {
+        background: #d7a426;
+      }
+
+      .banner-teal {
+        background: #1c8a88;
+      }
+
+      .banner-purple {
+        background: #7b4fa8;
+      }
+
+      .banner-orange {
+        background: #e26b2c;
+      }
+
+      /* Card */
+      .timeline-card {
+        margin-top: 14px;
+        background: #111111;
+        border-radius: 12px;
+        padding: 18px 22px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+      }
+
+      .timeline-role {
+        margin: 0 0 4px;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+
+      .timeline-org {
+        margin: 0 0 8px;
+        font-size: 0.9rem;
+      }
+
+      .timeline-org a {
+        border-bottom: none;
+      }
+
+      .timeline-card p {
+        margin: 0 0 6px;
+        font-size: 0.9rem;
+      }
+
+      .timeline-link {
+        margin-top: 10px;
+      }
+
+      .timeline-link a {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #55c4ff;
+        border-bottom: none;
+      }
+
+      /* Responsive (stacked) */
+      @media screen and (max-width: 900px) {
+        .timeline::before {
+          left: 18px;
+        }
+
+        .timeline-item,
+        .timeline-item.left,
+        .timeline-item.right {
+          width: 100%;
+          left: 0;
+          padding: 0 0 50px 50px;
+        }
+
+        .timeline-dot {
+          left: 18px;
+          transform: translateX(-50%);
+        }
+
+        .timeline-date {
+          font-size: 0.85rem;
+        }
+      }
+
+
       /* Additional section */
 
       .additional-grid {
@@ -763,9 +946,7 @@
                   Graduate Research Assistant · Department of Information Systems, University of Maryland, Baltimore County
                 </p>
                 <p class="hero-text">
-                  Welcome to my personal webpage! I am an enthusiastic Ph.D. candidate at the University of Maryland, Baltimore County, specializing in Artificial Intelligence and Machine Learning. Under the guidance of
-                  <a href="https://userpages.umbc.edu/~nroy/">Dr. Nirmalya Roy</a> in the Department of Information Systems, I am honing my skills in the cutting-edge fields of generative modeling, domain adaptation, and various forms of learning, including continual, self-supervised, and active learning.
-                  As a member of the Mobile, Pervasive and Sensor Computing (MPSC) Lab, I thrive in collaborative settings and am passionate about exploring theoretical and application-driven research.
+                  Welcome to my personal webpage! I have completed my Ph.D. in Information Systems and have over 6 years of experience developing foundation multimodal models, transformer-based generative systems, and autoregressive diffusion architectures for vision and language understanding. I am expert in real-time human–machine interaction, high-performance computing, multimodal LLMs, Agentic AI, andvision–text alignment. I am passionate about applying AI to improve efficiency, integrity, and user experience.
                 </p>
 
                 <div class="hero-buttons">
@@ -815,65 +996,60 @@
         </section>
 
         <!-- Education -->
-        <section id="education" class="section">
+        <section id="education">
           <div class="container">
-            <div class="section-header">
-              <div class="section-kicker">Background</div>
-              <h2 class="section-title">Education</h2>
-              <p class="section-subtitle">
-                Academic path and advisors.
-              </p>
-            </div>
+            <h3>Education</h3>
 
             <div class="timeline">
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <h4>Ph.D. in Information Systems</h4>
-                <p class="timeline-meta">
-                  University of Maryland, Baltimore County · January 2020 – Present · CGPA: 3.90/4.00
-                </p>
-                <p class="timeline-body">
-                  Supervisor:
-                  <a href="https://userpages.umbc.edu/~nroy/">Dr. Nirmalya Roy</a>, Professor
-                </p>
+
+              <!-- PhD -->
+              <div class="timeline-item left">
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                  <div class="timeline-date banner-blue">
+                    Jan 2020 – May 2025
+                  </div>
+                  <div class="timeline-card">
+                    <p class="timeline-role">Ph.D. in Information Systems</p>
+                    <p class="timeline-org">
+                      <a href="https://umbc.edu/">
+                        University of Maryland, Baltimore County
+                      </a>
+                    </p>
+                    <p class="timeline-org">
+                      Supervisior: <a href="https://userpages.umbc.edu/~nroy/">Dr. Nirmalya Roy</a>
+                    </p>
+                    <p class="timeline-org">CGPA: 3.90/4.00</p>
+                  </div>
+                </div>
               </div>
 
-              <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <h4>B.Sc. in Electrical and Electronic Engineering</h4>
-                <p class="timeline-meta">
-                  University of Dhaka · January 2014 – April 2018 · CGPA: 3.18/4.00
-                </p>
-                <p class="timeline-body">
-                  Supervisor:
-                  <a href="http://aa.binbd.com/">Dr. Md Atiqur Rahman Ahad</a>, Professor
-                </p>
+              <!-- BSc -->
+              <div class="timeline-item right">
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                  <div class="timeline-date banner-gold">
+                    Jan 2014 – Apr 2018
+                  </div>
+                  <div class="timeline-card">
+                    <p class="timeline-role">B.Sc. in Electrical and Electronic Engineering</p>
+                    <p class="timeline-org">
+                      <a href="https://www.du.ac.bd/">
+                        University of Dhaka
+                      </a>
+                    </p>
+                    <p class="timeline-org">
+                      Supervisor: <a href="http://aa.binbd.com/">Dr. Md Atiqur Rahman Ahad</a>
+                    </p>
+                    <p class="timeline-org">CGPA: 3.18/4.00</p>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <p style="margin-top: 1.2rem; font-size: 0.9rem; color: var(--text-soft);">
-              To download my transcript (authorization required):
-            </p>
-            <div class="hero-buttons">
-              <a
-                href="https://drive.google.com/file/d/1VeenjqDc8ZDzKiLDMf7CyPMhDL1Ti-5Y/view?usp=sharing"
-                class="btn btn-ghost"
-                target="_blank"
-                download
-              >
-                B.Sc. transcript
-              </a>
-              <a
-                href="https://drive.google.com/file/d/1cT4ts9ouLNBNwu8qK8D3_CX1_98xoC98/view?usp=sharing"
-                class="btn btn-ghost"
-                target="_blank"
-                download
-              >
-                Ph.D. transcript (unofficial)
-              </a>
             </div>
           </div>
         </section>
+
 
         <!-- Research -->
         <section id="research" class="section">
@@ -942,27 +1118,48 @@
               <div class="card">
                 <div class="pub-list-item" style="background:none;border:none;padding:0;margin:0;">
                   <i class="fa fa-gamepad pub-icon" aria-hidden="true"></i>
-                  <a href="https://github.com/mahmed10/LPM.git">
-                    Transformer-based LIDAR Semantic Segmentation Through Vector Quantization
+                  <a href="https://github.com/mahmed10/CAMSS.git">
+                    Transformer-based Semantic Segmentation on Continuous-valued Embedding
                   </a>
                   <ul style="margin-top:0.5rem;">
                     <li>
-                      Explored the application of Vector Quantization (VQ) techniques to LIDAR semantic segmentation, addressing challenges in generalization and interpretability present in traditional models
+                      Eliminated reliance on discrete codebooks, reducing information loss and enhancing spatial-contextual feature %learning
                     </li>
                     <li>
-                      Proposed a novel approach using Vector Quantized Variational Autoencoders (VQ-VAE) to encode LIDAR point cloud data into a discrete and compact codebook representation
+                      Proposed an RGB image-conditioned generation model using diffusion loss and transformer for continuous-valued semantic embedding
                     </li>
                     <li>
-                      Leveraged an autoregressive transformer model to generate high-quality semantic segmentation from the quantized representation
+                      Improved robustness against noise, artifacts, lighting variation, and enabled zero-shot domain adaptation across diverse conditions
                     </li>
                     <li>
-                      Employed video prompting techniques, enabling the model to also generate LIDAR point clouds, expanding its versatility for various autonomous system applications
+                      Validated across four public datasets with ablation studies on image size, color mapping, and distribution shifts
                     </li>
                   </ul>
                 </div>
               </div>
 
               <!-- Project 2 -->
+              <div class="card">
+                <div class="pub-list-item" style="background:none;border:none;padding:0;margin:0;">
+                  <i class="fa fa-gamepad pub-icon" aria-hidden="true"></i>
+                  <a href="https://github.com/mxahan/Lorentz_semantic_segmentation.git">
+                    Hyperbolic Text-guided Semantic Segmentation
+                  </a>
+                  <ul style="margin-top:0.5rem;">
+                    <li>
+                      Proposed a text-guided hyperbolic semantic segmentation framework using the Lorentz model to capture hierarchical pixel-label relationships in low-dimensional space
+                    </li>
+                    <li>
+                      Introduced a novel Lorentz entailment cone loss enabling pixel embeddings to align with class text prototypes, enforcing semantic hierarchy and improving interpretability
+                    </li>
+                    <li>
+                      Achieved competitive mIoU across mutiple dataset and improved zero-shot and uncertainty-aware segmentation
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
               <div class="card">
                 <div class="pub-list-item" style="background:none;border:none;padding:0;margin:0;">
                   <i class="fa fa-gamepad pub-icon" aria-hidden="true"></i>
@@ -979,53 +1176,11 @@
                     <li>
                       Reduced data transfer overhead, improving model performance with minimal labeled data
                     </li>
-                    <li>
-                      Collect RGB dataset at UMBC campus with different lighting condition (Noon, Dawn, Dask time)
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- Project 3 -->
-              <div class="card">
-                <div class="pub-list-item" style="background:none;border:none;padding:0;margin:0;">
-                  <i class="fa fa-gamepad pub-icon" aria-hidden="true"></i>
-                  <a href="https://github.com/mxahan/NCD_Experiments">
-                    Semantic Clustering Innovation: Novel Categories Discovery (NCD)
-                  </a>
-                  <ul style="margin-top:0.5rem;">
-                    <li>
-                      Develop NCD based algorithm for novel data clustering based on known class semantics, overcoming pseudo-labeling limitations
-                    </li>
-                    <li>
-                      Leverage data sampling and multinoulli distribution for implicit semantic clustering without extensive annotations
-                    </li>
-                    <li>
-                      Align class neuron activation distributions through Monte-Carlo sampling, explore directional statistics, and conduct ablation studies to advance state-of-the-art clustering approaches
-                    </li>
                   </ul>
                 </div>
               </div>
 
               <!-- Project 4 -->
-              <div class="card">
-                <div class="pub-list-item" style="background:none;border:none;padding:0;margin:0;">
-                  <i class="fa fa-gamepad pub-icon" aria-hidden="true"></i>
-                  <a href="https://github.com/mxahan/SrPPG.git">
-                    Learning the Optical & Physiological Mechanics of rPPG with Self-Supervision
-                  </a>
-                  <ul style="margin-top:0.5rem;">
-                    <li>
-                      In this computational biology project, proposed a self-supervised learning approach for estimating heart rate from remote photoplethysmography (rPPG) signals obtained from skin videos without the need for synchronized ground truth annotations
-                    </li>
-                    <li>
-                      Developed a contrastive learning-based pretraining strategy to learn the underlying diffusion signals' frequency, phase, and temporal coherence from unlabeled video frame sequences
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- Project 5 -->
               <div class="card">
                 <div class="pub-list-item" style="background:none;border:none;padding:0;margin:0;">
                   <i class="fa fa-gamepad pub-icon" aria-hidden="true"></i>
@@ -1046,7 +1201,48 @@
                 </div>
               </div>
 
+              <!-- Project 5 -->
+              <div class="card">
+                <div class="pub-list-item" style="background:none;border:none;padding:0;margin:0;">
+                  <i class="fa fa-gamepad pub-icon" aria-hidden="true"></i>
+                  <a href="https://github.com/mxahan/NCD_Experiments">
+                    Semantic Clustering Innovation: Novel Categories Discovery (NCD)
+                  </a>
+                  <ul style="margin-top:0.5rem;">
+                    <li>
+                      Develop NCD based algorithm for novel data clustering based on known class semantics, overcoming pseudo-labeling limitations
+                    </li>
+                    <li>
+                      Leverage data sampling and multinoulli distribution for implicit semantic clustering without extensive annotations
+                    </li>
+                    <li>
+                      Align class neuron activation distributions through Monte-Carlo sampling, explore directional statistics, and conduct ablation studies to advance state-of-the-art clustering approaches
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
               <!-- Project 6 -->
+              <div class="card">
+                <div class="pub-list-item" style="background:none;border:none;padding:0;margin:0;">
+                  <i class="fa fa-gamepad pub-icon" aria-hidden="true"></i>
+                  <a href="https://github.com/mxahan/SrPPG.git">
+                    Learning the Optical & Physiological Mechanics of rPPG with Self-Supervision
+                  </a>
+                  <ul style="margin-top:0.5rem;">
+                    <li>
+                      In this computational biology project, proposed a self-supervised learning approach for estimating heart rate from remote photoplethysmography (rPPG) signals obtained from skin videos without the need for synchronized ground truth annotations
+                    </li>
+                    <li>
+                      Developed a contrastive learning-based pretraining strategy to learn the underlying diffusion signals' frequency, phase, and temporal coherence from unlabeled video frame sequences
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              
+
+              <!-- Project 7 -->
               <div class="card">
                 <div class="pub-list-item" style="background:none;border:none;padding:0;margin:0;">
                   <i class="fa fa-gamepad pub-icon" aria-hidden="true"></i>
@@ -1071,375 +1267,263 @@
         </section>
 
         <!-- Publications -->
-        <section id="publication" class="section">
-          <div class="container pub-section">
-            <div class="section-header">
-              <div class="section-kicker">Publications</div>
-              <h2 class="section-title">Publications & Profiles</h2>
-            </div>
+        <section id="publications">
+  <div class="container">
+    <h3>Publications &amp; Profiles</h3>
 
-            <ul class="pill-list" style="margin-bottom: 1.1rem;">
-              <li>
-                <a href="https://scholar.google.com/citations?user=CGZguEcAAAAJ&hl=en">
-                  Google Scholar profile link
-                </a>
-              </li>
-              <li>
-                <a href="https://www.researchgate.net/profile/Masud_Ahmed8">
-                  ResearchGate profile link
-                </a>
-              </li>
-            </ul>
+    <div class="profiles-links">
+      <ul>
+        <li>
+          <a href="https://scholar.google.com/citations?user=CGZguEcAAAAJ&hl=en" target="_blank">
+            Google Scholar Profile
+          </a>
+        </li>
+        <li>
+          <a href="https://www.researchgate.net/profile/Masud_Ahmed8" target="_blank">
+            ResearchGate Profile
+          </a>
+        </li>
+      </ul>
+    </div>
 
-            <!-- Book -->
-            <h4>Book</h4>
-            <div
-              class="pub-list-item"
-              style="margin-bottom: 1rem"
-              itemscope
-              itemtype="http://schema.org/CreativeWork"
-            >
-              <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-              <span itemprop="author">
-                Md Atiqur Rahman Ahad, Anindya Das Antar, <b>Masud Ahmed</b>
-              </span>,
-              "<a
-                href="https://www.springer.com/gp/book/9783030513788#"
-                itemprop="name"
-                >IoT Sensor-Based Activity Recognition - Human Activity Recognition</a
-              >," Springer Nature.
-              <p>
-                <a
-                  class="btn-xs"
-                  href="https://www.google.com/books/edition/IoT_Sensor_Based_Activity_Recognition/tl70DwAAQBAJ?hl=en&gbpv=1&printsec=frontcover"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Preview of the book
-                </a>
-              </p>
-            </div>
+    <ul class="publication-list">
+      <li>
+        <strong>Lorentz Entailment Cone for Semantic Segmentation</strong><br>
+        2026 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) <br>
+        <em>Accepted for Publication</em>
+      </li>
 
-            <!-- Journal Papers -->
-            <h4>Journal Paper</h4>
+      <li>
+        <strong>CAM-Seg: A Continuous-valued Embedding Approach for Semantic Image Generation</strong><br>
+        2025 International Conference on Computer Vision (ICCV)<br>
+        <a href="https://openaccess.thecvf.com/content/ICCV2025W/Findings/html/Ahmed_CAM-Seg_A_Continuous-valued_Embedding_Approach_for_Semantic_Image_Generation_ICCVW_2025_paper.html" target="_blank">
+          Paper Link
+        </a>
+      </li>
 
-            <!-- J1 -->
-            <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-              <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-              <span itemprop="author">
-                Anindya Das Antar, <b>Masud Ahmed</b>, Md Atiqur Rahman Ahad
-              </span>,
-              "<a
-                href="https://www.sciencedirect.com/science/article/abs/pii/S0167865521001549"
-                itemprop="name"
-                >Recognition of human locomotion on various transportations fusing smartphone
-                sensors</a
-              >," Pattern Recognition Letters, 2021.
-              <p>
-                <a
-                  class="btn-xs"
-                  href="https://scholar.googleusercontent.com/scholar.bib?q=info:7dQNWw-uc0AJ:scholar.google.com/&output=citation&scisdr=ClH1mq7sEKS4v7Lfszo:AFWwaeYAAAAAZi3ZqzrsTmi-ec1nTnkDter89jU&scisig=AFWwaeYAAAAAZi3Zq61PczVaY9WLsMN3Hp71HEo&scisf=4&ct=citation&cd=-1&hl=en"
-                  target="_blank"
-                  rel="noopener"
-                  >Cite this paper</a
-                >
-              </p>
-            </div>
+      <li>
+        <strong>RRPIPS: Respiratory Waveform Reconstruction using Persistent Independent Particles Tracking from Video</strong><br>
+        2025 IEEE/ACM Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE)<br>
+        <a href="https://ieeexplore.ieee.org/abstract/document/11121083" target="_blank">
+          Paper Link
+        </a>
+      </li>
 
-            <!-- J2 -->
-            <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-              <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-              <span itemprop="author">
-                <b>Masud Ahmed</b>, Anindya Das Antar, Md Atiqur Rahman Ahad
-              </span>,
-              "<a
-                href="https://www.sciencedirect.com/science/article/abs/pii/S0167865521001252"
-                itemprop="name"
-                >Static postural transition-based technique and efficient feature extraction for
-                sensor-based activity recognition</a
-              >," Pattern Recognition Letters, 2021.
-              <p>
-                <a
-                  class="btn-xs"
-                  href="https://scholar.googleusercontent.com/scholar.bib?q=info:oW--z0wofdkJ:scholar.google.com/&output=citation&scisdr=ClH1mq7sEKS4v7LfE8Y:AFWwaeYAAAAAZi3ZC8YtDFjrr89irLMGvvXKvFM&scisig=AFWwaeYAAAAAZi3ZC8Nf4Ub5QUvtU5BZS1qCAZo&scisf=4&ct=citation&cd=-1&hl=en"
-                  target="_blank"
-                  rel="noopener"
-                  >Cite this paper</a
-                >
-              </p>
-            </div>
+      <li>
+        <strong>Respiratory Rate and Heart Rate in Facial Videos through the Lens of Temporal Pixel Variation</strong><br>
+        2025 IEEE/ACM Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE)<br>
+        <a href="https://dl.acm.org/doi/10.1145/3721201.3721406" target="_blank">
+          Paper Link
+        </a>
+      </li>
 
-            <!-- J3 -->
-            <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-              <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-              <span itemprop="author">
-                Md Atiqur Rahman Ahad, <b>Masud Ahmed</b>, Anindya Das Antar, Yasushi Makihara,
-                Yasushi Yagi
-              </span>,
-              "<a
-                href="https://www.sciencedirect.com/science/article/pii/S0167865521000751"
-                itemprop="name"
-                >Action recognition using kinematics posture feature on 3D skeleton joint
-                locations</a
-              >," Pattern Recognition Letters, 2021.
-              <p>
-                <a
-                  class="btn-xs"
-                  href="https://scholar.googleusercontent.com/scholar.bib?q=info:f4Cb-92cj48J:scholar.google.com/&output=citation&scisdr=ClH1mq7sEKS4v7LesCI:AFWwaeYAAAAAZi3YqCIVvA_ttnMl9OlsVKylTtQ&scisig=AFWwaeYAAAAAZi3YqNBYFYGTZ-GwLq7_--jpKSw&scisf=4&ct=citation&cd=-1&hl=en"
-                  target="_blank"
-                  rel="noopener"
-                  >Cite this paper</a
-                >
-              </p>
-            </div>
+      <li>
+        <strong>ARSFineTune: On-the-Fly Tuning of Vision Models for Unmanned Ground Vehicles</strong><br>
+        2024 IEEE International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT)<br>
+        <a href="https://ieeexplore.ieee.org/document/10621572" target="_blank">
+          Paper Link
+        </a>
+      </li>
 
-            <!-- J4 -->
-            <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-              <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-              <span itemprop="author">
-                Md Atiqur Rahman Ahad, Thanh Trung Ngo, Anindya Das Antar, <b>Masud Ahmed</b>,
-                Tahera Hossain, Daigo Muramatsu, Yasushi Makihara, Sozo Inoue, Yasushi Yagi
-              </span>,
-              "<a
-                href="https://www.mdpi.com/1424-8220/20/8/2424"
-                itemprop="name"
-                >Wearable Sensor-Based Gait Analysis for Age and Gender Estimation</a
-              >," Sensors, 2020.
-              <p>
-                <a
-                  class="btn-xs"
-                  href="https://scholar.googleusercontent.com/scholar.bib?q=info:ugy4pYaDEcEJ:scholar.google.com/&output=citation&scisdr=CgXI0vf_EJCe6m4YuRE:AAGBfm0AAAAAX50doRFbrUkQmBbHtrOwy_uv_hLK8XE7&scisig=AAGBfm0AAAAAX50doa2ii8aJZT4HdvEivLhrpkUy76ED&scisf=4&ct=citation&cd=-1&hl=en&scfhb=1"
-                  target="_blank"
-                  rel="noopener"
-                  >Cite this paper</a
-                >
-              </p>
-            </div>
+      <li>
+        <strong>VIVAR: Learning View-Invariant Embedding for Video Action Recognition</strong><br>
+        2024 International Conference on Video and Image Processing (ICVIP)<br>
+        <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/13558/135580A/VIVAR-learning-view-invariant-embedding-for-video-action-recognition/10.1117/12.3059138.full" target="_blank">
+          Paper Link
+        </a>
+      </li>
 
-            <!-- Conference Papers -->
-            <h4>Conference Paper</h4>
+      <li>
+        <strong>An Online Continuous Semantic Segmentation Framework With Minimal Labeling Efforts</strong><br>
+        2023 IEEE International Conference on Smart Computing (SMARTCOMP)<br>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10207655?casa_token=DhOmaQrtGGAAAAAA:-0VBROHq_uVIHRNbUAngeqrRKaKWzCxi3J82udvulI_diiBgWG-v_1WCNsAzsBwwArDgTIJn" target="_blank">
+          Paper Link
+        </a>
+      </li>
 
-            <!-- (All your conference paper divs, unchanged, start here) -->
-            <!-- I’m leaving the content exactly as you wrote it, just wrapped in the new styling. -->
+      <li>
+        <strong>NEV-NCD: Negative Learning, Entropy, and Variance Regularization Based Novel Action Categories Discovery</strong><br>
+        2023 IEEE International Conference on Image Processing (ICIP)<br>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10222474?casa_token=KYurFyFFOkUAAAAA:Sz-Jpdlvb6_wSFX510Yt6qfiJRsGBYSxaSdKu-KHCQK01GSaS5ewfVcZCziPUJ_zYh5_wkNP" target="_blank">
+          Paper Link
+        </a>
+      </li>
 
-            <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-              <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-              <span itemprop="author">
-                <b>Masud Ahmed</b>, Zahid Hasan, Abu Zaher Md Faridee, Mohammad Saeid Anwar,
-                Kasthuri Jayarajah, Sanjay Purushotham, Suya You, Nirmalya Roy
-              </span>,
-              "<a
-                href="https://ieeexplore.ieee.org/document/10621572"
-                itemprop="name"
-                >ARSFineTune: On-the-Fly Tuning of Vision Models for Unmanned Ground Vehicles</a
-              >," 2024 IEEE International Conference on Distributed Computing in Smart Systems and
-              the Internet of Things (DCOSS-IoT), 2024.
-              <p>
-                <a
-                  class="btn-xs"
-                  href="https://scholar.googleusercontent.com/scholar.bib?q=info:NcKL09bt2_MJ:scholar.google.com/&output=citation&scisdr=ClEyPB8REMqqpI3VBQQ:AFWwaeYAAAAAZxvTHQSWGcbiyni27eIrlOY9D3c&scisig=AFWwaeYAAAAAZxvTHdzN_hLTEwRBTB2AiwfzWzs&scisf=4&ct=citation&cd=-1&hl=en"
-                  target="_blank"
-                  rel="noopener"
-                  >Cite this paper</a
-                >
-              </p>
-            </div>
+      <li>
+        <strong>SrPPG: Semi-Supervised Adversarial Learning for Remote Photoplethysmography with Noisy Data</strong><br>
+        2023 IEEE International Conference on Smart Computing (SMARTCOMP)<br>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10207672?casa_token=LQtYZ0Qg1uYAAAAA:Uy_Zk4wxrgfKuaMYDDtSbitrY2olVYppfhhx4JJ3ns7NRP6PaWJzw9EY9xdYUS42EBM2jehV" target="_blank">
+          Paper Link
+        </a>
+      </li>
 
-            <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-              <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-              <span itemprop="author">
-                Zahid Hasan, <b>Masud Ahmed</b>, Abu Zaher Md Faridee, Sanjay Purushotham, Heesung
-                Kwon, Hyungtae Lee, Nirmalya Roy
-              </span>,
-              "<a
-                href="https://ieeexplore.ieee.org/abstract/document/10222474"
-                itemprop="name"
-                >NEV-NCD: Negative Learning, Entropy, and Variance regularization based novel action
-                categories discovery</a
-              >," 2023 IEEE International Conference on Image Processing (ICIP), 2023.
-              <p>
-                <a
-                  class="btn-xs"
-                  href="https://scholar.googleusercontent.com/scholar.bib?q=info:Ue2_O441RGAJ:scholar.google.com/&output=citation&scisdr=ClH1mq7sEKS4v7LZVFk:AFWwaeYAAAAAZi3fTFkE6esCYXhZhn36mAMADPs&scisig=AFWwaeYAAAAAZi3fTFum12u6skYEwOOX66Uy1_Y&scisf=4&ct=citation&cd=-1&hl=en&scfhb=1"
-                  target="_blank"
-                  rel="noopener"
-                  >Cite this paper</a
-                >
-              </p>
-            </div>
+      <li>
+        <strong>Self-rPPG: Learning the Optical &amp; Physiological Mechanics of Remote Photoplethysmography with Self-Supervision</strong><br>
+        2022 IEEE/ACM International Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE)<br>
+        <a href="https://ieeexplore.ieee.org/abstract/document/9983619?casa_token=8L_yQbRq-MEAAAAA:g1EWzrzeNvdWimQB_XtRoXbcGA-b3H69t1ddTnKzgABBeB7tjF6yhMQDEHhY55C3W9oUhSfK" target="_blank">
+          Paper Link
+        </a>
+      </li>
 
-            <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-              <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-              <span itemprop="author">
-                <b>Masud Ahmed</b>, Zahid Hasan, Tim Yingling, Eric O’Leary, Sanjay Purushotham,
-                Suya You, Nirmalya Roy
-              </span>,
-              "<a
-                href="https://ieeexplore.ieee.org/abstract/document/10207655"
-                itemprop="name"
-                >An Online Continuous Semantic Segmentation Framework With Minimal Labeling
-                Efforts</a
-              >," 2023 IEEE International Conference on Smart Computing (SMARTCOMP), 2023.
-              <p>
-                <a
-                  class="btn-xs"
-                  href="https://scholar.googleusercontent.com/scholar.bib?q=info:DqCrMgETB-AJ:scholar.google.com/&output=citation&scisdr=ClH1mq7sEKS4v7Lbmi8:AFWwaeYAAAAAZi3dgi-x4wyAOhgXR_N4VKl8XTw&scisig=AFWwaeYAAAAAZi3dgmieC-95D5lYt4gashKhuXk&scisf=4&ct=citation&cd=-1&hl=en"
-                  target="_blank"
-                  rel="noopener"
-                  >Cite this paper</a
-                >
-              </p>
-            </div>
+      <li>
+        <strong>GADAN: Generative Adversarial Domain Adaptation Network For Debris Detection Using Drone</strong><br>
+        2022 IEEE International Conference on Distributed Computing in Sensor Systems (DCOSS)<br>
+        <a href="https://ieeexplore.ieee.org/abstract/document/9881660" target="_blank">
+          Paper Link
+        </a>
+      </li>
 
-            <!-- (…continue copying all your remaining conference + arXiv items exactly as in your original HTML…) -->
+      <li>
+        <strong>Benchmarking domain adaptation for semantic segmentation</strong><br>
+        2022 SPIE Defense + Commercial Sensing<br>
+        <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12124/121240F/Benchmarking-domain-adaptation-for-semantic-segmentation/10.1117/12.2618548.short" target="_blank">
+          Paper Link
+        </a>
+      </li>
 
-            <h4>arXiv Preprint Paper</h4>
-            <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
-              <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-              <span itemprop="author">
-                Zahid Hasan, Abu Zaher Md Faridee, <b>Masud Ahmed</b>, Sanjay Purushotham, Heesung
-                Kwon, Hyungtae Lee, Nirmalya Roy
-              </span>,
-              "<a
-                href="https://arxiv.org/abs/2307.03856"
-                itemprop="name"
-                >Novel Categories Discovery from probability matrix perspective</a
-              >," 2023.
-              <p>
-                <a
-                  class="btn-xs"
-                  href="https://scholar.googleusercontent.com/scholar.bib?q=info:uztgth8PmHgJ:scholar.google.com/&output=citation&scisdr=ClH1mq7sEKS4v7LmFH0:AFWwaeYAAAAAZi3gDH16O1zKUPs-GBrBPr4SHq0&scisig=AFWwaeYAAAAAZi3gDAX6m5FdhSXSW42MJryQprY&scisf=4&ct=citation&cd=-1&hl=en"
-                  target="_blank"
-                  rel="noopener"
-                  >Cite this paper</a
-                >
-              </p>
-            </div>
-          </div>
-        </section>
+      <li>
+        <strong>Recognition of human locomotion on various transportations fusing smartphone sensors</strong><br>
+        2021 Elsevier Pattern Recognition Letters<br>
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167865521001549" target="_blank">
+          Paper Link
+        </a>
+      </li>
+
+      <li>
+        <strong>Static postural transition-based technique and efficient feature extraction for sensor-based activity recognition</strong><br>
+        2021 Elsevier Pattern Recognition Letters<br>
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167865521001252" target="_blank">
+          Paper Link
+        </a>
+      </li>
+
+      <li>
+        <strong>Action recognition using Kinematics Posture Feature on 3D skeleton joint locations</strong><br>
+        2021 Elsevier Pattern Recognition Letters<br>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0167865521000751" target="_blank">
+          Paper Link
+        </a>
+      </li>
+
+      <li>
+        <strong>Temporal Clustering Based Thermal Condition Monitoring in Building</strong><br>
+        2020 Elsevier Sustainable Computing: Informatics and Systems (SUSCOM)<br>
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S2210537920301682" target="_blank">
+          Paper Link
+        </a>
+      </li>
+
+      <li>
+        <strong>OU-ISIR wearable sensor-based gait challenge: Age and gender</strong><br>
+        2019 IEEE International Conference on Biometrics (ICB)<br>
+        <a href="https://ieeexplore.ieee.org/abstract/document/8987235" target="_blank">
+          Paper Link
+        </a>
+      </li>
+
+      <li>
+        <strong>POIDEN: position and orientation independent deep ensemble network for the classification of locomotion and transportation modes</strong><br>
+        2019 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp)<br>
+        <a href="https://dl.acm.org/doi/abs/10.1145/3341162.3345570" target="_blank">
+          Paper Link
+        </a>
+      </li>
+
+      <li>
+        <strong>Challenges in Sensor-based Human Activity Recognition and a Comparative Analysis of Benchmark Datasets: A Review</strong><br>
+        2019 International Conference on Informatics, Electronics &amp; Vision (ICIEV)<br>
+        <a href="https://ieeexplore.ieee.org/abstract/document/8858508" target="_blank">
+          Paper Link
+        </a>
+      </li>
+
+      <li>
+        <strong>An Approach to Classify Human Activities in Real-time from Smartphone Sensor Data</strong><br>
+        2019 International Conference on Informatics, Electronics &amp; Vision (ICIEV)<br>
+        <a href="https://ieeexplore.ieee.org/abstract/document/8858582" target="_blank">
+          Paper Link
+        </a>
+      </li>
+
+      <li>
+        <strong>A comparative approach to classification of locomotion and transportation modes using smartphone sensor data</strong><br>
+        2018 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp)<br>
+        <a href="https://dl.acm.org/doi/abs/10.1145/3267305.3267516" target="_blank">
+          Paper Link
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
 
         <!-- Experience -->
-        <section id="experience" class="section">
+        <section id="experience">
           <div class="container">
-            <div class="section-header">
-              <div class="section-kicker">Experience</div>
-              <h2 class="section-title">Work & Research Experiences</h2>
-            </div>
+            <h3>Work Experience</h3>
 
-            <div class="card-grid experience-grid">
-              <div class="card">
-                <div class="experience-logo">
-                  <img src="images/cards.png" alt="CARDS UMBC" />
-                </div>
-                <div>
-                  <h4>
-                    <a href="https://cards.umbc.edu/">
-                      Center for Real-time Distributed Sensing and Autonomy, University of Maryland
-                      Baltimore County
-                    </a>
-                  </h4>
-                  <div class="experience-meta">[July 2021 – Present]</div>
-                  <p style="font-size: 0.9rem; color: var(--text-soft);">
-                    Working as a graduate research assistant. In this research center I am working
-                    with robotics. My project is to virtual reality multi robot collboration network.
-                  </p>
-                </div>
-              </div>
+            <div class="timeline">
 
-              <div class="card">
-                <div class="experience-logo">
-                  <img src="images/mpsclogo.png" alt="MPSC Lab" />
-                </div>
-                <div>
-                  <h4>
-                    <a href="https://mpsc.umbc.edu/">
-                      MPSC Lab, Department of Information Systems, University of Maryland Baltimore
-                      County
-                    </a>
-                  </h4>
-                  <div class="experience-meta">[January 2020 – Present]</div>
-                  <p style="font-size: 0.9rem; color: var(--text-soft);">
-                    Working as a graduate research assistant. My research topic in this lab is
-                    related to computer vision and machine learning. I am working with RGB and Lidar
-                    data.
-                  </p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="experience-logo">
-                  <img src="images/osakalogo.png" alt="Yagi Lab" />
-                </div>
-                <div>
-                  <h4>
-                    <a href="http://www.am.sanken.osaka-u.ac.jp/">
-                      Yagi Laboratory, Department of Intelligent Media, ISIR, Osaka University
-                    </a>
-                  </h4>
-                  <div class="experience-meta">
-                    [October 2018 – November 2018 &amp; February 2019 – October 2019]
+              <!-- Postdoctoral Researcher -->
+              <div class="timeline-item left">
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                  <div class="timeline-date banner-blue">
+                    Jun 2025 – Present
                   </div>
-                  <p style="font-size: 0.9rem; color: var(--text-soft);">
-                    Worked as an assistant researcher. I was involved in three projects, RGB-D
-                    camera-based human activity recognition, autonomous health monitoring system
-                    design for elderly home, and camera-based artificial running monitoring system.
-                  </p>
+                  <div class="timeline-card">
+                    <p class="timeline-role">Postdoctoral Researcher</p>
+                    <p class="timeline-org">
+                      <a href="https://umbc.edu/">
+                        University of Maryland Baltimore County
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div class="card">
-                <div class="experience-logo">
-                  <img src="images/joykolylogo.jpg" alt="Joykoly" />
-                </div>
-                <div>
-                  <h4>
-                    <a href="https://www.facebook.com/JoykolyPublications/">
-                      Joykoly Publication Ltd.
-                    </a>
-                  </h4>
-                  <div class="experience-meta">[February 2018 – July 2018]</div>
-                  <p style="font-size: 0.9rem; color: var(--text-soft);">
-                    Worked as a content writer and website developer. This company publishes
-                    supplementary books for several public exams in Bangladesh.
-                  </p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="experience-logo">
-                  <img src="images/fablablogo.jpg" alt="Fab Lab" />
-                </div>
-                <div>
-                  <h4>
-                    <a href="https://fablab.du.ac.bd/">Fab Lab, University of Dhaka</a>
-                  </h4>
-                  <div class="experience-meta">[August 2018 – September 2018]</div>
-                  <p style="font-size: 0.9rem; color: var(--text-soft);">
-                    Worked as a supervisor for two projects in this lab. It was a voluntary job.
-                  </p>
+              <!-- Graduate Research Assistant -->
+              <div class="timeline-item right">
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                  <div class="timeline-date banner-gold">
+                    Jan 2020 – May 2025
+                  </div>
+                  <div class="timeline-card">
+                    <p class="timeline-role">Graduate Research Assistant</p>
+                    <p class="timeline-org">
+                      <a href="https://umbc.edu/">
+                        University of Maryland Baltimore County
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div class="card">
-                <div class="experience-logo">
-                  <img src="images/sakurasclogo.jpg" alt="Sakura Science Program" />
-                </div>
-                <div>
-                  <h4>
-                    <a href="https://mpsc.umbc.edu/">
-                      Sakura Science Program, Osaka Prefecture University
-                    </a>
-                  </h4>
-                  <div class="experience-meta">[December 2018]</div>
-                  <p style="font-size: 0.9rem; color: var(--text-soft);">
-                    Was invited to this program, so that I could do a collaborative project with
-                    researchers from two other countries.
-                  </p>
+              <!-- Assistant Researcher Yagi lab -->
+              <div class="timeline-item left">
+                <span class="timeline-dot"></span>
+                <div class="timeline-content">
+                  <div class="timeline-date banner-pink">
+                    Oct 2018 – Oct 2019
+                  </div>
+                  <div class="timeline-card">
+                    <p class="timeline-role">Assistant Researcher</p>
+                    <p class="timeline-org">
+                      <a href="http://www.am.sanken.osaka-u.ac.jp/">
+                        Yagi Laboratory, Osaka University
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
+
+              
+
             </div>
           </div>
         </section>
+
 
         <!-- Additional -->
         <section id="additional" class="section">
